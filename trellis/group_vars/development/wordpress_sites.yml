@@ -1,0 +1,20 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  daily.pizza:
+    site_hosts:
+      - canonical: daily.pizza
+        redirects:
+          - www.daily.pizza
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: luisarroyom@icloud.com
+    admin_user: luisarroyo
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
