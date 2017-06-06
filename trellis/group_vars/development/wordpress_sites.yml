@@ -5,9 +5,7 @@
 wordpress_sites:
   daily.pizza:
     site_hosts:
-      - canonical: daily.pizza
-        redirects:
-          - www.daily.pizza
+      - canonical: daily.pizza.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: luisarroyom@icloud.com
     admin_user: luisarroyo
